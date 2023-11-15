@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
+
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -74,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'codestar24.wsgi.application'
+WSGI_APPLICATION = 'codestar.wsgi.application'
 
 
 # Database
@@ -88,7 +89,7 @@ WSGI_APPLICATION = 'codestar24.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgres://cruaohwl:ksnro1PDHQjW7gMPmlzscZPAD-EagG7y@cornelius.db.elephantsql.com/cruaohwl"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 # Password validation
