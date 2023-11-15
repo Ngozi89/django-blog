@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['codestar24.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['codestar24.herokuapp.com', 'github']
 
 
 # Application definition
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'codestar.wsgi.application'
+WSGI_APPLICATION = 'codestar24.wsgi.application'
 
 
 # Database
@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get("postgres://cruaohwl:ksnro1PDHQjW7gMPmlzscZPAD-EagG7y@cornelius.db.elephantsql.com/cruaohwl"))
 }
 
 # Password validation
@@ -130,7 +130,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_PORT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_RORT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
