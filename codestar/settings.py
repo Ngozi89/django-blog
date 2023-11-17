@@ -33,7 +33,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-ngozi89-django-blog-xii9ztpy3i.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['codestar24.herokuapp.com',  'github']
 
 
 # Application definition
